@@ -1,0 +1,5 @@
+node_modules
+public/images/groups/*
+public/images/profiles/*
+public/images/companies/*
+public/files/*

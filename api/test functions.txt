@@ -1,0 +1,60 @@
+--watchAll
+
+
+// falsy 
+
+
+  expect(n).toBeNull();
+  expect(n).toBeDefined();
+  expect(n).not.toBeUndefined();  not. => 3aks
+  expect(n).not.toBeTruthy();
+  expect(n).toBeFalsy();
+
+
+//Numbers
+
+ expect(value).toBeGreaterThan(3);
+  expect(value).toBeGreaterThanOrEqual(3.5);
+  expect(value).toBeLessThan(5);
+  expect(value).toBeLessThanOrEqual(4.5);
+  expect(value).toBe(4);
+  expect(value).toEqual(4);
+
+
+// Floating 
+ expect(value).toBeCloseTo(0.3)
+
+
+
+//strings
+
+  expect('Christoph').toMatch(/stop/);  /aa/ =>madem famma stop mrigl ma3néha
+  expect('team').not.toMatch(/I/);
+  expect("raz").toContain("raz");
+
+//arrays 
+
+  expect(shoppingList).toContain('milk');
+  expect(new Set(shoppingList)).toContain('milk');
+   expect(result).toEqual(expect.arrayContaining(['milk,'sugar']))
+
+//objects
+	toEqual() ==>lazim 9ad9ad nafs les attributs
+	toMatchObject() ==>  mouch lazim 9ad9ad lomhim les attributs lmawjoudin 
+	toHaveProperty( 'id',1);=>3andou property héki + value héki.	
+
+//exceptions
+expect(()=> {//the code we expected to crash }).toThrow();
+
+
+//grouping 
+
+ describe("group,()=>{
+		
+ it("test",()=>{})
+});
+
+
+//test
+beforeEach(()=>{})
+afterEach(()=>{})

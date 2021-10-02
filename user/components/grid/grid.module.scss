@@ -1,0 +1,27 @@
+.grid {
+  min-width: 45rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+  position: relative;
+  min-width: 25rem;
+  min-height: 15rem;
+  border-radius: 10px;
+  background-color: #fff;
+
+  &__shadow {
+    box-shadow: 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.15);
+  }
+  &__toucheble {
+    transition: transform 0.2s, box-shadow 0.3s;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.3);
+    }
+    &:active {
+      transform: translateY(-1rem);
+    }
+  }
+}

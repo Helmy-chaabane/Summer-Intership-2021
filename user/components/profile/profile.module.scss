@@ -1,0 +1,92 @@
+.profile {
+  display: flex;
+
+  &__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__descr {
+    padding: 1rem;
+    font-size: 1.7rem;
+    white-space: pre-line;
+  }
+
+  &__photo {
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.info {
+  flex: 1;
+  margin: 1rem 0;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+  }
+
+  &__icon {
+    fill: #000;
+    width: 25px;
+    margin-right: 1.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}
+
+.edit {
+  padding: 1rem;
+  &__btns {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  &__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+    appearance: none;
+    width: 100%;
+    outline: 0;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: gray;
+    border: 0;
+    border-bottom: 1px solid royalblue;
+    margin-bottom: 2rem;
+    &__wrapper {
+      margin-bottom: 2rem;
+    }
+
+    &__error {
+      border-bottom: 1px solid tomato;
+      color: tomato;
+
+      &__text {
+        color: #f86045;
+        font-weight: 600;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+    }
+    &__option {
+      appearance: none;
+      padding: 3rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: gray;
+    }
+
+    &:focus {
+      border-bottom: 3px solid royalblue;
+    }
+  }
+}

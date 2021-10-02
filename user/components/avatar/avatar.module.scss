@@ -1,0 +1,20 @@
+.avatar {
+  display: flex;
+  align-items: center;
+
+  &__clickable {
+    cursor: pointer;
+  }
+  &__photo {
+    border-radius: 50%;
+  }
+  &__details {
+    color: currentColor;
+  }
+  &__title {
+    color: currentColor;
+  }
+  &__subTitle {
+    color: gray;
+  }
+}

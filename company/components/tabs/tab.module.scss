@@ -1,0 +1,29 @@
+.tab {
+  margin: 3rem 0;
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked ~ &__text {
+    border-bottom: 2px solid royalblue;
+    border-width: 4px;
+  }
+
+  &__text {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 2rem;
+    transition: all 0.1s;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}

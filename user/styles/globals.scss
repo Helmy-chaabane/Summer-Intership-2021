@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: 600px) {
+    font-size: 35%;
+  }
+}
+body {
+  font-family: Segoe UI Historic, Helvetica, sans-serif, Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(240, 240, 240);
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

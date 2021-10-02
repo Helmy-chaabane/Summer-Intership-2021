@@ -1,0 +1,48 @@
+.popup {
+  z-index: 8000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+
+  &__container {
+    min-width: 40%;
+    max-width: 70%;
+    padding: 2rem;
+    border-radius: 30px;
+    background-color: #fff;
+    transform: scale(0);
+    animation: grow 0.2s ease-out 0.2s normal forwards;
+  }
+
+  &__close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: rotate(90deg);
+      color: royalblue;
+    }
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

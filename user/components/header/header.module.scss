@@ -1,0 +1,111 @@
+.header {
+  padding: 0.5rem 5rem;
+  background-color: #444444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logobar {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+
+    &__name {
+      margin-left: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link:visited,
+  &__link:link {
+    outline: 0;
+    border: 0;
+    position: relative;
+    padding: 1rem;
+    display: inline-block;
+    margin-right: 4rem;
+    transition: all 0.4s;
+  }
+
+  &__link__active {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background-color: #fff;
+    }
+  }
+  &__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    fill: #fff;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 2rem;
+    border-radius: 10px;
+
+    &__icon {
+      margin-right: 2.5rem;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &__profile {
+      cursor: pointer;
+      position: relative;
+
+      &:hover .header__user__list {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &__list {
+      position: absolute;
+      background-color: #fff;
+      top: 105%;
+      right: -5rem;
+      min-width: 20rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.3);
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.15s;
+
+      &__link:visited,
+      &__link:link {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: gray;
+
+        &:hover {
+          background-color: rgba($color: #000000, $alpha: 0.2);
+        }
+      }
+    }
+  }
+}

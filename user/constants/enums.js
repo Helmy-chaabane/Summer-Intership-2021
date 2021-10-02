@@ -1,0 +1,24 @@
+const STATUS = {
+  FREE: "FREE",
+  TRIAL: "TRAIL",
+  PAID: "PAID",
+};
+
+const PRIVACY = {
+  PUBLIC: "PUBLIC",
+  PRIVATE: "PRIVATE",
+};
+
+const ROLES = {
+  ADMIN: "ADMIN",
+  USER: "USER",
+};
+
+const NOTIFICATION_STATE = {
+  ERROR: "ERROR",
+  WARNING: "WARNING",
+  INFO: "INFO",
+  SUCCESS: "SUCCESS",
+};
+
+export { ROLES, PRIVACY, STATUS, NOTIFICATION_STATE };

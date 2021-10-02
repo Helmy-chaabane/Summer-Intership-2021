@@ -1,0 +1,36 @@
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1px;
+  border-color: gray;
+  background-color: #fff;
+
+  &__clickable:hover {
+    background-color: #f0f2f5;
+    cursor: pointer;
+  }
+
+  &__dark {
+    background-color: #bdbec0;
+  }
+
+  tr {
+    box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.3);
+  }
+
+  th {
+    font-size: 1.7rem;
+    color: #65676b;
+    padding: 2rem;
+    text-align: left;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  td {
+    padding: 2rem;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+  }
+}

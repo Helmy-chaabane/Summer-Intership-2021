@@ -1,0 +1,86 @@
+.form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    position: relative;
+
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    word-break: break-word;
+    position: absolute;
+    top: -20%;
+    left: 0%;
+
+    font-weight: 600;
+    color: gray;
+    transition: 0.2s;
+
+    &::first-letter {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    &__error {
+      color: rgb(248, 96, 69);
+      font-weight: 600;
+    }
+    &__required {
+      &::after {
+        content: "*";
+        color: rgb(248, 96, 69);
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__input {
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid rgb(99, 71, 255);
+    padding: 1rem 0;
+    font-family: inherit;
+    font-weight: 500;
+    color: rgb(27, 27, 27);
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+
+    &::placeholder {
+      color: transparent;
+    }
+    &:placeholder-shown ~ .form__label {
+      font-weight: 600;
+      cursor: text;
+      top: 25%;
+      left: 0.5%;
+    }
+
+    &:placeholder-shown ~ .form__label .form__icon {
+      visibility: visible;
+      margin-right: 1rem;
+    }
+
+    &:focus {
+      border-width: 3px;
+    }
+    &__error {
+      border-color: rgb(248, 96, 69);
+    }
+  }
+
+  &__error {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(248, 96, 69);
+    margin-top: 0.5rem;
+  }
+
+  &__icon {
+    font-size: 1.3rem;
+    margin-right: 0rem;
+    visibility: hidden;
+  }
+}
